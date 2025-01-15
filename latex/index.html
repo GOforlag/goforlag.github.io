@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.20/dist/katex.min.css" integrity="sha384-sMefv1J1YJCHsg0mTa9YG+n/9KnJb9lGrJUUY5arg6bAL1qps/oZjmUwaHlX5Ugg" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.20/dist/katex.min.js" integrity="sha384-i9p+YmlwbK0lT9RcfgdAo/Cikui1KeFMeV/0Fwsu+rzgsCvas6oUptNOmo29C33p" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.20/dist/contrib/mhchem.min.js" integrity="sha384-F2ptQFZqNJuqfGGl28mIXyQ5kXH48spn7rcoS0Y9psqIKAcZPLd1NzwFlm/bl1mH"  crossorigin="anonymous"></script>
+    <script>
+
+      function handleSubmit(e) {
+        e.preventDefault()
+        var html = katex.renderToString(document.getElementById("input").value, {
+    throwOnError: false
+});
+      document.getElementById("textarea").value = html
+      document.getElementById("preview").innerHTML = html
+      }
+    </script>
+    <style>
+      body {
+        font-size: 18px;
+      }
+      #form {
+        display: flex;
+        gap: 20px
+      }
+      #input {
+        flex: 1;
+        padding: 20px;
+        font-size: 18px;
+      }
+      #submit {
+        flex: 0 0 100px;
+      }
+      #preview {
+        margin-top: 20px;
+      }
+      #textarea {
+        padding: 20px;
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+        min-height: 300px;
+      }
+    </style>
+  </head>
+<body>
+  <form id="form" onsubmit="return handleSubmit(event)">
+    <input id="input" value="c = \pm\sqrt{a^2 + b^2}" />
+    <button id="submit">Ok</button>
+  </form>
+
+  <div id="preview"></div>
+
+<textarea id="textarea"></textarea>
+
+</body>
+</html>
