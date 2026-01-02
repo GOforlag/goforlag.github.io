@@ -152,6 +152,8 @@
             showCursor: true,
             cursorChar: '|',
             onComplete: function(self) {
+                // Hide cursor after typing completes
+                self.cursor.style.display = 'none';
                 // Fade in the main element after typing completes
                 document.querySelector('main').classList.add('fade-in');
             }
