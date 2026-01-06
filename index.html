@@ -1,7 +1,217 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forlaget Plenum</title>
+    <style>
+      @font-face {
+        font-family: "Newsreader";
+        src: url("fonts/Newsreader-VariableFont_opsz,wght.ttf")
+          format("truetype-variations");
+        font-weight: 200 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Newsreader";
+        src: url("fonts/Newsreader-Italic-VariableFont_opsz,wght.ttf")
+          format("truetype-variations");
+        font-weight: 200 600;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Newsreader";
+        font-weight: 200;
+        line-height: 1.4;
+        color: #fff;
+        padding: 0px;
+        background-color: #00bd3a;
+        background-image: url("logo.svg");
+        background-position: calc(100% + 2vw) calc(100% + 2vw);
+        background-repeat: no-repeat;
+        background-size: 30vw;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      h1 {
+        font-weight: 200;
+        font-size: 3em;
+        line-height: 1.2em;
+      }
+
+      p {
+        font-size: 2em;
+        margin-bottom: 0.4em;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      main {
+        padding: 20px 0;
+
+        opacity: 0;
+        transition: opacity 1s ease-in;
+      }
+      .columns {
+        columns: 2 300px;
+        column-gap: 40px;
+      }
+
+      main.fade-in {
+        opacity: 1;
+      }
+      .links {
+        padding: 40px 0;
+      }
+
+      .links a {
+        font-size: 2em;
+        color: #fff;
+        border-radius: 10px;
+        display: inline-flex;
+        padding: 12px 20px 10px 20px;
+        font-size: 1.4em;
+        text-align: center;
+        width: 320px;
+        background-color: #03643970;
+        text-decoration: none;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        transition: background-color 0.5s;
+        margin-bottom: 10px;
+      }
+      .links a:hover {
+        background-color: #036439;
+      }
+      .links a svg {
+        margin-top: -2px;
+        transition: transform 0.5s;
+      }
+
+      .links a:hover svg {
+        transform: translateX(10px);
+      }
+
+      @media (min-width: 800px) {
+        h1 {
+          font-size: 4em;
+        }
+        .links {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><span id="typed"></span></h1>
+      </header>
+
+      <main>
+        <div class="columns">
+          <p>
+            I 2024 fusionerede GO Forlag og Columbus, og nu tager vi skridtet
+            videre og får nyt navn: Forlaget Plenum.
+          </p>
+
+          <p>
+            Sammen giver vi dig endnu mere at vælge imellem – hvad enten du
+            underviser i grundskolen eller gymnasiet i naturfag, samfundsfag,
+            kulturfag eller sprog.
+          </p>
+
+          <p>
+            Med Forlaget Plenum samler vi det bedste fra begge verdener og skaber et stærkere fundament for din undervisning. Vores mål er at gøre det nemt for dig at finde materialer af høj kvalitet, der passer præcis til dine elevers behov.
+
+          </p>
+
+          <p>
+              Snart kan du finde det hele her. Indtil da kan du gøre, som du
+              plejer.
+          </p>
+        </div>
+        <div class="links">
+          <a href="https://forlagetcolumbus.dk"
+            >Besøg forlagetcolumbus.dk
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right-icon lucide-arrow-right"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" /></svg
+          ></a>
+          <a href="https://goforlag.dk"
+            >Besøg goforlag.dk
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right-icon lucide-arrow-right"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" /></svg
+          ></a>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#typed", {
+        strings: [
+          "Forlagene GO og Columbus<br />bliver til <strong>Forlaget Plenum</strong>",
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: false,
+        showCursor: true,
+        cursorChar: "|",
+        onComplete: function (self) {
+          // Hide cursor after typing completes
+          self.cursor.style.display = "none";
+          // Fade in the main element after typing completes
+          document.querySelector("main").classList.add("fade-in");
+        },
+      });
+    </script>
+  </body>
 </html>
