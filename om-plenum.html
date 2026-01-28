@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Om Forlaget Plenum</title>
+    <style>
+      @font-face {
+        font-family: "Newsreader";
+        src: url("fonts/Newsreader-VariableFont_opsz,wght.ttf")
+          format("truetype-variations");
+        font-weight: 200 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Newsreader";
+        src: url("fonts/Newsreader-Italic-VariableFont_opsz,wght.ttf")
+          format("truetype-variations");
+        font-weight: 200 600;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Newsreader";
+        font-weight: 200;
+        line-height: 1.4;
+        color: #fff;
+        padding: 0px;
+        background-color: #036439;
+        background-image: url("logo-light.svg");
+        background-position: calc(100% + 2vw) calc(100% + 2vw);
+        background-repeat: no-repeat;
+        background-size: 30vw;
+        background-attachment: fixed;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .two-columns {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .column-about,
+      .column-staff {
+        flex: 1;
+      }
+
+      h1 {
+        font-weight: 200;
+        font-size: 3em;
+        line-height: 1.2em;
+        margin-bottom: 0.5em;
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+      }
+
+      h3 {
+        font-weight: 400;
+        font-size: 1.4em;
+        margin-bottom: 0.3em;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1.25em;
+        margin-bottom: 0.8em;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      a {
+        color: #fff;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1.2em;
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 20px;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+      }
+
+      .back-link:hover {
+        opacity: 1;
+      }
+
+      section {
+        margin-bottom: 2em;
+      }
+
+      .staff-group {
+        margin-bottom: 2em;
+      }
+
+      .staff-member {
+        margin-bottom: 0.8em;
+      }
+
+      .staff-member strong {
+        display: block;
+        font-size: 1.1em;
+      }
+
+      .staff-member span {
+        font-size: 1em;
+        opacity: 0.9;
+      }
+
+      @media (min-width: 900px) {
+        h1 {
+          font-size: 4em;
+        }
+
+        .two-columns {
+          flex-direction: row;
+          align-items: flex-start;
+        }
+
+        .column-about {
+          
+          top: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="/" class="back-link">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m12 19-7-7 7-7" />
+          <path d="M19 12H5" />
+        </svg>
+        Tilbage til forsiden
+      </a>
+
+      <h1>Om Forlaget Plenum</h1>
+
+      <div class="two-columns">
+        <div class="column-about">
+          <section>
+        <p>
+          Vi udvikler læremidler til dig, der underviser børn og unge. Vores mål
+          er at styrke faglig og pædagogisk kvalitet i undervisningen – og
+          samtidig gøre det lettere for lærere at planlægge, gennemføre og
+          variere undervisningen i praksis.
+        </p>
+        <p>
+          Plenum er et moderne, professionelt forlag, der konkurrerer på lige
+          fod med andre udbydere. Samtidig er vi en almennyttig fond, hvor en
+          del af overskuddet går tilbage til undervisningsverdenen. Fonden er
+          stiftet og styret af engagerede undervisere, og det præger alt, hvad
+          vi gør.
+        </p>
+      </section>
+
+      <section>
+        <h2>Fag og faglige fællesskaber</h2>
+        <p>
+          Vi udgiver analoge og digitale læremidler til samfunds-, natur- samt
+          sprog- og kulturfag i både grundskolen og på ungdomsuddannelserne. Nye
+          udgivelser udvikler vi altid i dialog med fagfolk, og ofte er det
+          undervisere selv, der står som forfattere.
+        </p>
+        <p>
+          Vi samarbejder tæt med lærernes faglige foreninger og bakker aktivt op
+          om stærke faglige fællesskaber. Det er her, vores rødder er – og her,
+          vi fortsat henter inspiration til materialer, der er fagligt solide og
+          didaktisk gennemtænkte.
+        </p>
+      </section>
+
+      <section>
+        <h2>Vores historie</h2>
+        <p>
+          Forlaget Plenum bygger på mere end 50 års erfaring med udvikling af
+          læremidler. Rødderne går tilbage til 1970'erne, hvor samfundsfags- og
+          geografilærere begyndte at udgive deres egne materialer gennem faglige
+          foreninger.
+        </p>
+        <p>
+          Her opstod Forlaget Columbus og GO Forlag (oprindeligt
+          Geografforlaget). I 2024 fusionerede de to forlag, og i 2026 samlede
+          vi historien og erfaringen under ét nyt navn: Forlaget Plenum.
+        </p>
+      </section>
+
+      <section>
+        <h2>Forlag med formål</h2>
+        <p>
+          Som fondsejet forlag har vi ingen private ejere. En del af vores
+          overskud går tilbage til undervisningsverdenen i form af støtte til
+          faglige og pædagogiske udviklingsprojekter, faglige tidsskrifter og
+          andre initiativer.
+        </p>
+        <p>
+          Det betyder, at vi kan prioritere langsigtet kvalitet, faglig
+          udvikling og undervisernes behov frem for kortsigtet profit. Vores
+          arbejde er forankret i vores fondsvedtægt, der tydeligt beskriver
+          vores formål og ansvar.
+        </p>
+      </section>
+
+      <section>
+        <h2>Et professionelt forlag</h2>
+        <p>
+          Vores ideelle formål går hånd i hånd med professionel forlagsdrift.
+          Fondens midler skabes gennem salg af læremidler i konkurrence med
+          andre forlag, og vi bliver kun valgt til, hvis vores produkter gør en
+          reel forskel i undervisningen.
+        </p>
+        <p>
+          Derfor udvikler vores medarbejdere læremidler sammen med dygtige
+          forfattere og fagfolk i både trykte og digitale formater – som
+          sammenhængende undervisningsuniverser, der understøtter lærere og
+          elever i hverdagen og sikrer faglig progression.
+        </p>
+        <p>
+          Vores mål er enkelt: at give dig de fagligt og didaktisk bedste
+          læremidler, som gør en konkret forskel i din undervisning.
+        </p>
+      </section>
+        </div>
+
+        <div class="column-staff">
+        <div class="staff-group">
+          <h3>Ledelse</h3>
+          <div class="staff-member">
+            <strong>Anders Hassing</strong>
+            <span>Adm. direktør / CEO – Strategisk og daglig ledelse</span>
+          </div>
+        </div>
+
+        <div class="staff-group">
+          <h3>Sekretariat og kundeservice</h3>
+          <div class="staff-grid">
+            <div class="staff-member">
+              <strong>Mette Schiøtt</strong>
+              <span>Administrationschef – Foreninger, abonnementsaftaler, administration</span>
+            </div>
+            <div class="staff-member">
+              <strong>Anette Petersen</strong>
+              <span>Økonomi – Bogholderi og regnskab</span>
+            </div>
+            <div class="staff-member">
+              <strong>Karla Tolsted</strong>
+              <span>Studentermedhjælper – Kundeservice</span>
+            </div>
+            <div class="staff-member">
+              <strong>Cathrine Sørensen</strong>
+              <span>Studentermedhjælper – Kundeservice</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="staff-group">
+          <h3>Grundskoleredaktion</h3>
+          <div class="staff-grid">
+            <div class="staff-member">
+              <strong>Jesper Bønløkke</strong>
+              <span>Redaktør – Naturfag</span>
+            </div>
+            <div class="staff-member">
+              <strong>Louise Krogsgaard Madsen</strong>
+              <span>Redaktør – Matematik</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="staff-group">
+          <h3>Udvikling</h3>
+          <div class="staff-grid">
+            <div class="staff-member">
+              <strong>Lars Gaardsøe</strong>
+              <span>Udvikler – Frontend</span>
+            </div>
+            <div class="staff-member">
+              <strong>Carsten Pedersen</strong>
+              <span>Udvikler – Backend</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="staff-group">
+          <h3>Gymnasieredaktion</h3>
+          <div class="staff-grid">
+            <div class="staff-member">
+              <strong>Peter Brøndum</strong>
+              <span>Redaktør – Samfundsfag</span>
+            </div>
+            <div class="staff-member">
+              <strong>Katrine Cohen</strong>
+              <span>Redaktør – Fremmedsprog</span>
+            </div>
+            <div class="staff-member">
+              <strong>Tine Stoltenberg</strong>
+              <span>Redaktør – Manuskripter</span>
+            </div>
+            <div class="staff-member">
+              <strong>Ulla Nedergård Petersen</strong>
+              <span>Redaktør – Historie</span>
+            </div>
+            <div class="staff-member">
+              <strong>Christian Jackson</strong>
+              <span>Studentermedhjælper – Rettigheder</span>
+            </div>
+            <div class="staff-member">
+              <strong>Julie Dam</strong>
+              <span>Studentermedhjælper – Digitale udgivelser</span>
+            </div>
+            <div class="staff-member">
+              <strong>Rosalina Thaning</strong>
+              <span>Studentermedhjælper – Digitale udgivelser</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="staff-group">
+          <h3>Kommunikation</h3>
+          <div class="staff-grid">
+            <div class="staff-member">
+              <strong>Simone Alice Holm</strong>
+              <span>Kommunikationskoordinator – Kampagner og events</span>
+            </div>
+            <div class="staff-member">
+              <strong>Lasse Jakobsen</strong>
+              <span>Kommunikationsmedarbejder – Nyhedsbreve og SoMe</span>
+            </div>
+            <div class="staff-member">
+              <strong>Bodil Mulla</strong>
+              <span>Grafiker – Bøger og marketing</span>
+            </div>
+            <div class="staff-member">
+              <strong>Caroline Due</strong>
+              <span>Projektleder – Video og eksternt finansierede projekter</span>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
