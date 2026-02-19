@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bannere – Forlaget Plenum</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <style>
+      @font-face {
+        font-family: "Newsreader";
+        src: url("fonts/Newsreader-VariableFont_opsz,wght.ttf")
+          format("truetype-variations");
+        font-weight: 200 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Newsreader";
+        src: url("fonts/Newsreader-Italic-VariableFont_opsz,wght.ttf")
+          format("truetype-variations");
+        font-weight: 200 600;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Newsreader";
+        font-weight: 200;
+        line-height: 1.4;
+        color: #fff;
+        padding: 0px;
+        background-color: #fff;
+      }
+
+      .top-banner-container {
+        position: relative;
+        font-family: "Inter", sans-serif;
+        background-color: #323232;
+        font-weight: 100;
+        padding: 10px;
+        color: #ffffff;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 80%;
+      }
+
+      #logo {
+        height: 30px;
+        margin-right: 10px;
+        animation: slideOut 1s ease-in-out 1s forwards;
+      }
+
+      @keyframes slideOut {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(-150px);
+          opacity: 0;
+        }
+      }
+
+      .typed-container {
+        position: absolute;
+        left: 20px;
+      }
+      #typed-text {
+        font-size: 1em;
+      }
+
+      #typed-text strong {
+        font-weight: 700;
+      }
+
+      .typed-cursor {
+        font-size: 1em;
+        color: #ffffff;
+      }
+
+      .read-more-link {
+        position: absolute;
+        font-family: "Inter", sans-serif;
+        font-size: 80%;
+        top: 17px;
+        right: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: gap 0.3s ease;
+      }
+
+      .read-more-link:hover {
+        gap: 10px;
+      }
+
+      .read-more-link .arrow.animate {
+        animation: arrowMove 0.6s ease-in-out 3;
+      }
+
+      .read-more-link:hover .arrow {
+        animation: arrowMove 0.6s ease-in-out infinite;
+      }
+
+      @keyframes arrowMove {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(5px);
+        }
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .banner {
+        border-radius: 5px;
+        background-size: cover;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 40px;
+        overflow: hidden;
+      }
+
+      .banner--left {
+        flex-direction: row-reverse;
+      }
+
+      .banner__content {
+        flex: 0 0 400px;
+        padding: 40px;
+      }
+
+      .banner--content-bg .banner__content {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      .banner__title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .banner__lead {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+      }
+
+      .banner__button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #036439;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .banner__image-wrapper {
+        flex: 1;
+        text-align: center;
+      }
+      .banner__image {
+        max-width: 100%;
+        margin: 20px;
+      }
+      @media (min-width: 600px) {
+        .banner {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-banner-container">
+      <img id="logo" src="logoxlogo.svg" alt="Forlaget Plenum Logo" />
+      <div class="typed-container">
+        <span id="typed-text"></span>
+      </div>
+    </div>
+    <a href="#" class="read-more-link">
+      Læs mere her <span class="arrow">→</span>
+    </a>
+    <div class="container">
+      <div
+        class="banner banner--left"
+        style="
+          background-image: url(morkt-simpelt-plenum-banner.svg);
+          background-position: center right;
+        "
+      >
+        <div class="banner__image-wrapper">
+          <img class="banner__image" src="cover.png" />
+        </div>
+        <div class="banner__content" style="flex: 0 0 40.333%">
+          <h1 class="banner__title">5. udgave på vej</h1>
+          <a href="#" class="banner__button">Læs mere</a>
+        </div>
+      </div>
+
+      <div
+        class="banner banner banner--content-bg"
+        style="background-image: url(alt-cover-banner.webp)"
+      >
+        <div class="banner__image-wrapper">
+          <img class="banner__image" src="cover.png" style="width: 200px" />
+        </div>
+        <div class="banner__content" style="flex: 0 0 500px">
+          <h1 class="banner__title">Overskrift</h1>
+          <div class="banner__lead">En længere beskrivelse om banneret</div>
+          <a href="#" class="banner__button">Læs mere</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Wait for logo to slide out before starting typing animation
+      setTimeout(function () {
+        var typed = new Typed("#typed-text", {
+          strings: [
+            "Forlaget Columbus og GO Forlag er gået sammen i <strong>Forlaget Plenum</strong>",
+          ],
+          typeSpeed: 40,
+          backSpeed: 40,
+          backDelay: 800,
+          startDelay: 0,
+          loop: false,
+          showCursor: true,
+          cursorChar: "|",
+          autoInsertCss: true,
+          contentType: "html",
+          onComplete: function (self) {
+            self.cursor.remove();
+            // Trigger arrow animation after typing is complete
+            const arrow = document.querySelector(".arrow");
+            if (arrow) {
+              arrow.classList.add("animate");
+            }
+          },
+        });
+      }, 2000); // Start after logo animation (1s delay + 1s animation)
+    </script>
+  </body>
+</html>
