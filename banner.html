@@ -160,8 +160,9 @@
         background-color: rgba(0, 0, 0, 0.2);
       }
       .banner__title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         margin-bottom: 20px;
+        font-weight: 300;
       }
 
       .banner__lead {
@@ -173,9 +174,10 @@
         display: inline-block;
         padding: 10px 20px;
         background-color: #fff;
-        color: #036439;
+        color: #444;
         text-decoration: none;
         border-radius: 5px;
+        font-family: "Inter", sans-serif;
       }
       .banner__image-wrapper {
         flex: 1;
@@ -189,6 +191,74 @@
         .banner {
           display: flex;
         }
+      }
+
+      /* Full-bleed static image hero banner */
+      .banner--image-hero {
+        position: relative;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .banner--image-hero .banner__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      .banner--image-hero .banner__content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 600px;
+      }
+
+      /* Light-background banner variant */
+      .banner--light {
+        color: #1a1a1a;
+      }
+
+      .banner--light .banner__button {
+        background-color: #036439;
+        color: #fff;
+      }
+
+      /* Video background banner */
+      .banner--video {
+        position: relative;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .banner--video .banner__video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .banner--video .banner__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 1;
+      }
+
+      .banner--video .banner__content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        flex: unset;
+        max-width: 600px;
       }
     </style>
   </head>
@@ -214,8 +284,8 @@
           <img class="banner__image" src="cover.png" />
         </div>
         <div class="banner__content" style="flex: 0 0 40.333%">
-          <h1 class="banner__title">5. udgave på vej</h1>
-          <a href="#" class="banner__button">Læs mere</a>
+          <h1 class="banner__title">5. udgave – nu med opdateret indhold</h1>
+          <a href="#" class="banner__button">Forudbestil</a>
         </div>
       </div>
 
@@ -227,9 +297,99 @@
           <img class="banner__image" src="cover.png" style="width: 200px" />
         </div>
         <div class="banner__content" style="flex: 0 0 500px">
-          <h1 class="banner__title">Overskrift</h1>
-          <div class="banner__lead">En længere beskrivelse om banneret</div>
-          <a href="#" class="banner__button">Læs mere</a>
+          <h1 class="banner__title">Fagbøger til alle klassetrin</h1>
+          <div class="banner__lead">Vores titler er skrevet af erfarne undervisere og fagfolk – og bruges i folkeskoler og gymnasier over hele landet.</div>
+          <a href="#" class="banner__button">Se alle titler</a>
+        </div>
+      </div>
+      <div class="banner banner--video">
+        <video
+          class="banner__video"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          <source src="iso-republic-sky-before-dawn.mp4" type="video/mp4" />
+        </video>
+        <div class="banner__overlay"></div>
+        <div class="banner__content">
+          <h1 class="banner__title">Klar til nyt skoleår?</h1>
+          <div class="banner__lead">Find de rette læremidler til dit fag – fra indskoling til gymnasium.</div>
+          <a href="#" class="banner__button">Se kataloget</a>
+        </div>
+      </div>
+
+      <div class="banner banner--video">
+        <video
+          class="banner__video"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          <source src="iso-republic-free-video-054.mp4" type="video/mp4" />
+        </video>
+        <div class="banner__overlay"></div>
+        <div class="banner__content">
+          <h1 class="banner__title">Velkommen til Forlaget Plenum</h1>
+          <div class="banner__lead">Forlaget Columbus og GO Forlag har forenet kræfterne. Samme faglige kvalitet – nyt fælles navn.</div>
+          <a href="#" class="banner__button">Læs om fusionen</a>
+        </div>
+      </div>
+
+      <!-- books.jpg – full-bleed hero with dark overlay -->
+      <div
+        class="banner banner--image-hero"
+        style="background-image: url(books.jpg)"
+      >
+        <div class="banner__overlay"></div>
+        <div class="banner__content">
+          <h1 class="banner__title">Mere end 500 titler til undervisningen</h1>
+          <div class="banner__lead">Fra folkeskole til professionsuddannelse – find bogen, der passer til dit fag og niveau.</div>
+          <a href="#" class="banner__button">Se hele kataloget</a>
+        </div>
+      </div>
+
+      <!-- lyst-cover-banner.webp – light background, book cover left -->
+      <div
+        class="banner banner--light"
+        style="background-image: url(lyst-cover-banner.webp); background-size: cover; background-position: center"
+      >
+        <div class="banner__image-wrapper">
+          <img class="banner__image" src="cover.png" style="width: 200px" />
+        </div>
+        <div class="banner__content" style="flex: 0 0 500px">
+          <h1 class="banner__title">Ny fra Forlaget Plenum</h1>
+          <div class="banner__lead">Vores seneste udgivelser er klar til bestilling – til levering i god tid inden skolestart.</div>
+          <a href="#" class="banner__button">Se nye titler</a>
+        </div>
+      </div>
+
+      <!-- morkt-cover-banner.webp – dark background, book cover right -->
+      <div
+        class="banner banner--left"
+        style="background-image: url(morkt-cover-banner.webp); background-size: cover; background-position: center"
+      >
+        <div class="banner__image-wrapper">
+          <img class="banner__image" src="cover.png" style="width: 200px" />
+        </div>
+        <div class="banner__content" style="flex: 0 0 500px">
+          <h1 class="banner__title">Undervisere anbefaler</h1>
+          <div class="banner__lead">Se hvilke bøger dine kolleger bruger i undervisningen – og find dit næste favorithæfte.</div>
+          <a href="#" class="banner__button">Se anbefalinger</a>
+        </div>
+      </div>
+
+      <!-- simpelt-plenum-banner.svg – minimal branding, light, no overlay -->
+      <div
+        class="banner banner--image-hero banner--light"
+        style="background-image: url(simpelt-plenum-banner.svg); background-color: #f9f6f0; min-height: 280px"
+      >
+        <div class="banner__content">
+          <h1 class="banner__title">To forlag, én ambition</h1>
+          <div class="banner__lead">Forlaget Columbus og GO Forlag er nu ét – med fælles passion for undervisning, der gør en forskel.</div>
+          <a href="#" class="banner__button">Om Forlaget Plenum</a>
         </div>
       </div>
     </div>
