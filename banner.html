@@ -302,9 +302,9 @@
       .banner--video .banner__overlay {
         position: absolute;
         inset: 0;
-
         background: rgba(0, 0, 0, 0.45);
         z-index: 1;
+        pointer-events: none;
       }
 
       .banner--video .banner__content {
@@ -485,16 +485,20 @@
         var content = banner.querySelector(".banner__content");
 
         playBtn.addEventListener("click", function () {
+          video.controls = true;
           video.play();
           playBtn.style.display = "none";
           overlay.style.opacity = "0";
           content.style.opacity = "0";
+          content.style.pointerEvents = "none";
         });
 
         video.addEventListener("ended", function () {
+          video.controls = false;
           playBtn.style.display = "flex";
           overlay.style.opacity = "1";
           content.style.opacity = "1";
+          content.style.pointerEvents = "";
         });
       });
 
