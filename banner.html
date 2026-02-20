@@ -228,6 +228,59 @@
         color: #fff;
       }
 
+      .banner--video.banner--16-9 {
+        min-height: unset;
+        aspect-ratio: 16 / 9;
+      }
+
+      /* Player-style video banner */
+      .banner__play-btn {
+        position: absolute;
+        z-index: 3;
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, transform 0.2s;
+      }
+
+      .banner__play-btn:hover {
+        background: rgba(255, 255, 255, 0.28);
+        transform: scale(1.08);
+      }
+
+      .banner__play-btn::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 13px 0 13px 22px;
+        border-color: transparent transparent transparent #fff;
+        margin-left: 5px;
+      }
+
+      .banner--player .banner__overlay {
+        transition: opacity 0.3s ease;
+      }
+
+      .banner--video.banner--player .banner__content {
+        transition: opacity 0.3s ease;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: left;
+        padding: 30px 40px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
+        width: 100%;
+      }
+
       /* Video background banner */
       .banner--video {
         position: relative;
@@ -249,6 +302,7 @@
       .banner--video .banner__overlay {
         position: absolute;
         inset: 0;
+
         background: rgba(0, 0, 0, 0.45);
         z-index: 1;
       }
@@ -258,7 +312,7 @@
         z-index: 2;
         text-align: center;
         flex: unset;
-        max-width: 600px;
+        
       }
     </style>
   </head>
@@ -338,6 +392,34 @@
         </div>
       </div>
 
+      <div class="banner banner--video banner--16-9 banner--player">
+        <video
+          class="banner__video"
+          playsinline
+        >
+          <source src="emil_plenum.dk_v5 (1080p).mp4" type="video/mp4" />
+        </video>
+        <div class="banner__overlay"></div>
+        <button class="banner__play-btn" aria-label="Afspil video"></button>
+        <div class="banner__content">
+          <a href="#" class="banner__button">Læs mere om bogen</a>
+        </div>
+      </div>
+
+      <div class="banner banner--video banner--16-9 banner--player">
+        <video
+          class="banner__video"
+          playsinline
+        >
+          <source src="reklamefilm_horizontalt_1920x1080_v5 (1080p).mp4" type="video/mp4" />
+        </video>
+        <div class="banner__overlay"></div>
+        <button class="banner__play-btn" aria-label="Afspil video"></button>
+        <div class="banner__content">
+          <a href="#" class="banner__button">Læs mere om bogen</a>
+        </div>
+      </div>
+
       <!-- books.jpg – full-bleed hero with dark overlay -->
       <div
         class="banner banner--image-hero"
@@ -394,6 +476,28 @@
       </div>
     </div>
     <script>
+      // Click-to-play video banners
+      document.querySelectorAll(".banner--player").forEach(function (banner) {
+        var video = banner.querySelector(".banner__video");
+        var playBtn = banner.querySelector(".banner__play-btn");
+        var overlay = banner.querySelector(".banner__overlay");
+
+        var content = banner.querySelector(".banner__content");
+
+        playBtn.addEventListener("click", function () {
+          video.play();
+          playBtn.style.display = "none";
+          overlay.style.opacity = "0";
+          content.style.opacity = "0";
+        });
+
+        video.addEventListener("ended", function () {
+          playBtn.style.display = "flex";
+          overlay.style.opacity = "1";
+          content.style.opacity = "1";
+        });
+      });
+
       // Wait for logo to slide out before starting typing animation
       setTimeout(function () {
         var typed = new Typed("#typed-text", {
