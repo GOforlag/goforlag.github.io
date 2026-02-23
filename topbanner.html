@@ -151,31 +151,39 @@
     </div>
 
     <script>
-      // Wait for logo to slide out before starting typing animation
-      setTimeout(function () {
-        var typed = new Typed("#typed-text", {
-          strings: [
-            "Forlaget Columbus og GO Forlag er gået sammen i <strong>Forlaget Plenum</strong>",
-          ],
-          typeSpeed: 40,
-          backSpeed: 40,
-          backDelay: 800,
-          startDelay: 0,
-          loop: false,
-          showCursor: true,
-          cursorChar: "|",
-          autoInsertCss: true,
-          contentType: "html",
-          onComplete: function (self) {
-            self.cursor.remove();
-            // Trigger arrow animation after typing is complete
-            const arrow = document.querySelector(".arrow");
-            if (arrow) {
-              arrow.classList.add("animate");
-            }
-          },
-        });
-      }, 2000); // Start after logo animation (1s delay + 1s animation)
+      const STORAGE_KEY = "banner-shown";
+      const fullText =
+        "Forlaget Columbus og GO Forlag er gået sammen i <strong>Forlaget Plenum</strong>";
+
+      if (sessionStorage.getItem(STORAGE_KEY)) {
+        // Already seen this session – show final state immediately, no animations
+        document.getElementById("logo").style.display = "none";
+        document.getElementById("typed-text").innerHTML = fullText;
+      } else {
+        // First visit – run animations, then store the flag
+        setTimeout(function () {
+          var typed = new Typed("#typed-text", {
+            strings: [fullText],
+            typeSpeed: 40,
+            backSpeed: 40,
+            backDelay: 800,
+            startDelay: 0,
+            loop: false,
+            showCursor: true,
+            cursorChar: "|",
+            autoInsertCss: true,
+            contentType: "html",
+            onComplete: function (self) {
+              self.cursor.remove();
+              const arrow = document.querySelector(".arrow");
+              if (arrow) {
+                arrow.classList.add("animate");
+              }
+              sessionStorage.setItem(STORAGE_KEY, "1");
+            },
+          });
+        }, 2000); // Start after logo animation (1s delay + 1s animation)
+      }
     </script>
   </body>
 </html>
