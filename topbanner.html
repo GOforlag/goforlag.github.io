@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bannere – Forlaget Plenum</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <style>
+      @font-face {
+        font-family: "Newsreader";
+        src: url("fonts/Newsreader-VariableFont_opsz,wght.ttf")
+          format("truetype-variations");
+        font-weight: 200 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Newsreader";
+        src: url("fonts/Newsreader-Italic-VariableFont_opsz,wght.ttf")
+          format("truetype-variations");
+        font-weight: 200 600;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Newsreader";
+        font-weight: 200;
+        line-height: 1.4;
+        color: #fff;
+        padding: 0px;
+        background-color: #fff;
+      }
+
+      .top-banner-container {
+        position: relative;
+        font-family: "Inter", sans-serif;
+        background-color: #323232;
+        font-weight: 100;
+        padding: 10px;
+        color: #ffffff;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 80%;
+      }
+
+      #logo {
+        position: absolute;
+        top: 4px;
+        height: 30px;
+        margin-right: 10px;
+        animation: slideOut 1s ease-in-out 1s forwards;
+      }
+
+      @keyframes slideOut {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(-150px);
+          opacity: 0;
+        }
+      }
+
+      .typed-container_ {
+        position: absolute;
+        left: 20px;
+      }
+      #typed-text {
+        font-size: 1em;
+      }
+
+      #typed-text strong {
+        font-weight: 700;
+      }
+
+      .typed-cursor {
+        font-size: 1em;
+        color: #ffffff;
+      }
+
+      .read-more-link {
+        font-family: "Inter", sans-serif;
+        top: 17px;
+        right: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: gap 0.3s ease, opacity 0.3s ease;
+        opacity: .7;
+      }
+
+      .read-more-link:hover {
+        gap: 5px;
+        opacity: 1;
+      }
+
+      .read-more-link .arrow.animate {
+        animation: arrowMove 0.6s ease-in-out 3;
+      }
+
+      .read-more-link:hover .arrow {
+        animation: arrowMove 0.6s ease-in-out infinite;
+      }
+
+      @keyframes arrowMove {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(5px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-banner-container">
+      <div>
+        <img id="logo" src="logoxlogo.svg" alt="Forlaget Plenum Logo" />
+        <div class="typed-container">
+          <span id="typed-text"></span>
+        </div>
+      </div>
+
+      <a href="#" class="read-more-link">
+        Læs mere <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <script>
+      // Wait for logo to slide out before starting typing animation
+      setTimeout(function () {
+        var typed = new Typed("#typed-text", {
+          strings: [
+            "Forlaget Columbus og GO Forlag er gået sammen i <strong>Forlaget Plenum</strong>",
+          ],
+          typeSpeed: 40,
+          backSpeed: 40,
+          backDelay: 800,
+          startDelay: 0,
+          loop: false,
+          showCursor: true,
+          cursorChar: "|",
+          autoInsertCss: true,
+          contentType: "html",
+          onComplete: function (self) {
+            self.cursor.remove();
+            // Trigger arrow animation after typing is complete
+            const arrow = document.querySelector(".arrow");
+            if (arrow) {
+              arrow.classList.add("animate");
+            }
+          },
+        });
+      }, 2000); // Start after logo animation (1s delay + 1s animation)
+    </script>
+  </body>
+</html>
