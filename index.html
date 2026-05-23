@@ -54,7 +54,7 @@
 
       h1 {
         font-weight: 200;
-        font-size: 3em;
+        font-size: 2em;
         line-height: 1.2em;
       }
 
@@ -117,7 +117,7 @@
 
       @media (min-width: 800px) {
         h1 {
-          font-size: 4em;
+          font-size: 2em;
         }
         .links {
           display: flex;
@@ -133,120 +133,25 @@
         <h1><span id="typed"></span></h1>
       </header>
 
-      <main>
-        <div class="columns">
-          <p>
-            I 2024 fusionerede GO Forlag og Columbus, og nu tager vi skridtet
-            videre og får nyt navn: Forlaget Plenum.
-          </p>
-
-          <p>
-            Sammen giver vi dig endnu mere at vælge imellem – hvad enten du
-            underviser i grundskolen eller gymnasiet i naturfag, samfundsfag,
-            kulturfag eller sprog.
-          </p>
-
-          <p>
-            Med Forlaget Plenum samler vi det bedste fra begge verdener og skaber et stærkere fundament for din undervisning. Vores mål er at gøre det nemt for dig at finde materialer af høj kvalitet, der passer præcis til dine elevers behov.
-          </p>
-
-          <p>
-              Snart kan du finde det hele her. Indtil da kan du gøre, som du
-              plejer.
-          </p>
-        </div>
-        <div class="links">
-          <a href="https://forlagetcolumbus.dk"
-            >Besøg forlagetcolumbus.dk
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-right-icon lucide-arrow-right"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" /></svg
-          ></a>
-          <a href="https://goforlag.dk"
-            >Besøg goforlag.dk
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-right-icon lucide-arrow-right"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" /></svg
-          ></a>
-        </div>
-        <div class="links">
-          <a href="/pressemeddelelsen.html">Læs pressemeddelelse
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-right-icon lucide-arrow-right"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" /></svg
-          >
-           </a>
-           <a href="/om-plenum.html">Mere om Forlaget Plenum
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-right-icon lucide-arrow-right"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" /></svg
-          >
-           </a>
-        </div>
-      </main>
     </div>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
       var typed = new Typed("#typed", {
         strings: [
-          "Forlagene GO og Columbus<br />bliver til <strong>Forlaget Plenum</strong>",
+          "Der er noget nyt på vej...",
         ],
         typeSpeed: 50,
         backSpeed: 30,
         loop: false,
         showCursor: true,
         cursorChar: "|",
-        onComplete: function (self) {
+        /* onComplete: function (self) {
           // Hide cursor after typing completes
           self.cursor.style.display = "none";
           // Fade in the main element after typing completes
           document.querySelector("main").classList.add("fade-in");
-        },
+        }, */
       });
     </script>
   </body>
